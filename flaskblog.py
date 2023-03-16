@@ -22,6 +22,10 @@ engine = create_engine(DATABASE_URI)
 # initialize the app with the extension
 db.init_app(app)
 
+# create the database
+with app.app_context():
+    db.create_all()
+
 
 posts = [
     {
