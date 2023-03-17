@@ -23,3 +23,19 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+
+# code Sqlite3 Commands
+
+# create_all() - create all tables
+# user = User(username='Uttam',email = 'u@demo.com',password='password')
+# db.session.add(user)
+# db.session.commit()
+
+#  User.query.all()
+#  User.query.first()
+#  User.query.filter_by(username='Uttam').all()
+#  User.query.filter_by(username='Uttam').first()
+#  user = User.query.filter_by(username='Uttam').first()
+#  user = User.query.get(1)
+
+
