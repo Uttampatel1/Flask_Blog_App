@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flaskblog.models import db
-
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager
 
 # create the app
 app = Flask(__name__)
@@ -14,11 +14,13 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # replace DATABASE_URI with the path to your SQLite database file
 DATABASE_URI = 'sqlite:///project.db'
 
-engine = create_engine(DATABASE_URI)
+bcrypt = Bcrypt(app)
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+login_manager.login_message_category = 'info'
 
+db = SQLAlchemy()
 # initialize the app with the extension
 db.init_app(app)
 
-# create the database
-with app.app_context():
-    db.create_all()
+from flaskblog import routes
