@@ -1,4 +1,38 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <h1>About page</h1>
+<div class="container my-5">
+    <h1 class="display-4">About</h1>
+    <p>Welcome to Flask Blog App! This is a simple blogging platform built using the Flask framework. It allows users to create, read, update, and delete blog posts.</p>
+    <p>Flask Blog App was created by Uttam Patel as a personal project to learn and practice web development skills. It is open source and available on GitHub at <a class="link-success" href="https://github.com/Uttampatel1">Uttampatel1</a>.</p>
+    <h2 class="mt-5">Technologies Used</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Python 3.9</li>
+        <li class="list-group-item">Flask 2.1.0</li>
+        <li class="list-group-item">SQLite 3</li>
+        <li class="list-group-item">HTML 5</li>
+        <li class="list-group-item">CSS 3</li>
+        <li class="list-group-item">Bootstrap 5.1.0</li>
+    </ul>
+    <h2 class="mt-5">Features</h2>
+    <ul class="list-group">
+        <li class="list-group-item">User authentication</li>
+        <li class="list-group-item">Create, read, update, and delete blog posts</li>
+        <li class="list-group-item">Responsive design</li>
+        <li class="list-group-item">Search functionality</li>
+        <li class="list-group-item">Pagination</li>
+    </ul>
+    <h2 class="mt-5">Getting Started</h2>
+    <p>To run Flask Blog App on your local machine, follow these steps:</p>
+    <ol>
+        <li>Clone the repository: <code>git clone [GitHub repository link]</code></li>
+        <li>Navigate to the project directory: <code>cd flask-blog-app</code></li>
+        <li>Create a virtual environment: <code>python3 -m venv venv</code></li>
+        <li>Activate the virtual environment: <code>source venv/bin/activate</code></li>
+        <li>Install the required packages: <code>pip install -r requirements.txt</code></li>
+        <li>Create the database: <code>flask init-db</code></li>
+        <li>Run the app: <code>flask run</code></li>
+        <li>Open your web browser and go to <code>http://localhost:5000</code></li>
+    </ol>
+    <p>If you have any questions or suggestions, feel free to contact me at utampipaliya@gmail.com.</p>
+</div>
 {% endblock content %}
