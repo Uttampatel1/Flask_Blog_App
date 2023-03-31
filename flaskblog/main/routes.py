@@ -13,3 +13,7 @@ def home():
 @main.route('/about')
 def about():
     return render_template("about.html",title="About")
+
+@main.route('/announcements')
+def announcements():
+    return render_template('announcements.html')

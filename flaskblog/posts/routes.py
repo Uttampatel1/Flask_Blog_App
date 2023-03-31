@@ -52,4 +52,17 @@ def delete_post(post_id):
     db.session.commit()
     flash("Your post has been Delete!","success")
     return redirect(url_for('main.home'))
-    
+
+@posts.route('/search')
+def search():
+    query = request.args.get('q')
+    if query:
+        posts = Post.search(query)
+    else:
+        posts = []
+    return render_template('search.html', posts=posts)
+
+@posts.route('/latest')
+def latest_posts():
+    posts = Post.latest_posts()
+    return render_template('latest_posts.html', posts=posts)

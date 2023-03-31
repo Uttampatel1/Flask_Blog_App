@@ -39,6 +39,16 @@ class Post(db.Model):
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
+    @staticmethod
+    def search(query):
+        words = query.split()
+        filters = [Post.title.ilike(f'%{word}%') | Post.content.ilike(f'%{word}%') for word in words]
+        return Post.query.filter(*filters).join(User).all()
+
+    @staticmethod
+    def latest_posts(limit=4):
+        return Post.query.order_by(Post.date_posted.desc()).limit(limit).all()
+
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
 

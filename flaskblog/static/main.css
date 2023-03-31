@@ -39,6 +39,10 @@ a{
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .article-title {
@@ -50,8 +54,13 @@ a.article-title:hover {
   text-decoration: none;
 }
 
+
 .article-content {
   white-space: pre-line;
+  /* padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .article-img {
@@ -135,4 +144,18 @@ pre {
   padding: 0.25rem;
 }
 
+#sb-btn {
+  background-color: #f7f7f9ee;
+  color: #000000;
+}
 
+/* link style */
+
+a {
+  color: #33a2e1;
+}
+
+a:hover {
+  color: #33a2e1;
+  text-decoration: none;
+}
