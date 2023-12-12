@@ -1,7 +1,7 @@
 # Falsk Blog App
 
 ## Description
-This is a blog app built with Flask. It allows users to create, edit and delete posts. It also allows users to register and login to the app. The app is deployed on Heroku and can be accessed [here](https://flask-blog-app-2021.herokuapp.com/).
+This is a blog app built with Flask. It allows users to create, edit and delete posts. It also allows users to register and login to the app. 
 
 ## Technologies Used
 - Python
