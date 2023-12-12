@@ -9,7 +9,6 @@ This is a blog app built with Flask. It allows users to create, edit and delete 
 - HTML
 - CSS
 - Bootstrap
-- Heroku
 
 ## Setup and Installation
 - Create and activate a virtual environment
